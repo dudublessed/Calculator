@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Calculator
 {
     public partial class Calculator : Form
@@ -74,7 +76,19 @@ namespace Calculator
 
         private void signalButton_Click(object sender, EventArgs e)
         {
-            typedBox.Text = ($"-{typedBox.Text}");
+            string minus = "-";
+            bool control = typedBox.Text.Contains(minus);
+            int index = typedBox.Text.IndexOf(minus);
+
+            if (control == false)
+            {
+                typedBox.Text = ($"{minus}{typedBox.Text}");
+            }   
+            else if (control == true)
+            { 
+                typedBox.Text = typedBox.Text.Remove(index, minus.Length);
+            }
+            
         }
 
         private void clearButton_Click(object sender, EventArgs e)
