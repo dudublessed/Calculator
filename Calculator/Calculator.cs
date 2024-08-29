@@ -1,3 +1,4 @@
+ï»¿using System;
 using System.Text;
 
 namespace Calculator
@@ -83,25 +84,26 @@ namespace Calculator
             if (control == false)
             {
                 typedBox.Text = ($"{minus}{typedBox.Text}");
-            }   
+            }
             else if (control == true)
-            { 
+            {
                 typedBox.Text = typedBox.Text.Remove(index, minus.Length);
             }
-            
+
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
             typedBox.Text = string.Empty;
             previewBox.Text = string.Empty;
+            decimal? MathValue = null;
         }
 
         private void divisionButton_Click(object sender, EventArgs e)
         {
             SelectedMath = Maths.Divide;
             MathValue = Convert.ToDecimal(typedBox.Text);
-            previewBox.Text = ($"{typedBox.Text} ÷");
+            previewBox.Text = ($"{typedBox.Text} Ã·");
             typedBox.Text = string.Empty;
         }
 
@@ -109,7 +111,7 @@ namespace Calculator
         {
             SelectedMath = Maths.Multiply;
             MathValue = Convert.ToDecimal(typedBox.Text);
-            previewBox.Text = ($"{typedBox.Text} ×");
+            previewBox.Text = ($"{typedBox.Text} Ã—");
             typedBox.Text = string.Empty;
         }
 
@@ -129,18 +131,43 @@ namespace Calculator
             typedBox.Text = string.Empty;
         }
 
+
+        private void sqrButton_Click(object sender, EventArgs e)
+        {
+            MathValue = Convert.ToDecimal(typedBox.Text);
+            MathResult = Convert.ToDecimal(Math.Sqrt(Convert.ToDouble(MathValue)));
+            previewBox.Text = ($"âˆš({MathValue})");
+            typedBox.Text = Convert.ToString(MathResult);
+        }
+
+        private void expoButton_Click(object sender, EventArgs e)
+        {
+            MathValue = Convert.ToDecimal(typedBox.Text);
+            MathResult = Convert.ToDecimal(Math.Pow(Convert.ToDouble(MathValue), 2));
+            previewBox.Text = ($"sqr({MathValue})");
+            typedBox.Text = Convert.ToString(MathResult);
+        }
+
+        private void logButton_Click(object sender, EventArgs e)
+        {
+            MathValue = Convert.ToDecimal(typedBox.Text);
+            MathResult = Convert.ToDecimal(Math.Log10(Convert.ToDouble(MathValue)));
+            previewBox.Text = ($"log({MathValue})");
+            typedBox.Text = Convert.ToString(MathResult);
+        }
+
         private void resultButton_Click(object sender, EventArgs e)
         {
             switch (SelectedMath)
             {
                 case Maths.Divide:
                     MathResult = (MathValue / Convert.ToDecimal(typedBox.Text));
-                    previewBox.Text = ($"{MathValue} ÷ {typedBox.Text} =");
+                    previewBox.Text = ($"{MathValue} Ã· {typedBox.Text} =");
                     typedBox.Text = Convert.ToString(MathResult);
                     break;
                 case Maths.Multiply:
                     MathResult = (MathValue * Convert.ToDecimal(typedBox.Text));
-                    previewBox.Text = ($"{MathValue} × {typedBox.Text} =");
+                    previewBox.Text = ($"{MathValue} Ã— {typedBox.Text} =");
                     typedBox.Text = Convert.ToString(MathResult);
                     break;
                 case Maths.Subtract:

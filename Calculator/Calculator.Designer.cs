@@ -51,6 +51,9 @@ namespace Calculator
             previewBox = new TextBox();
             decimalButton = new Button();
             signalButton = new Button();
+            sqrButton = new Button();
+            expoButton = new Button();
+            logButton = new Button();
             SuspendLayout();
             // 
             // typedBox
@@ -74,6 +77,7 @@ namespace Calculator
             clearButton.BackColor = Color.DimGray;
             clearButton.BackgroundImageLayout = ImageLayout.None;
             clearButton.FlatAppearance.BorderColor = Color.Black;
+            clearButton.FlatAppearance.BorderSize = 0;
             clearButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             clearButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             clearButton.FlatStyle = FlatStyle.Flat;
@@ -93,6 +97,7 @@ namespace Calculator
             divisionButton.BackColor = Color.DimGray;
             divisionButton.BackgroundImageLayout = ImageLayout.None;
             divisionButton.FlatAppearance.BorderColor = Color.Black;
+            divisionButton.FlatAppearance.BorderSize = 0;
             divisionButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             divisionButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             divisionButton.FlatStyle = FlatStyle.Flat;
@@ -112,6 +117,7 @@ namespace Calculator
             multiplyButton.BackColor = Color.DimGray;
             multiplyButton.BackgroundImageLayout = ImageLayout.None;
             multiplyButton.FlatAppearance.BorderColor = Color.Black;
+            multiplyButton.FlatAppearance.BorderSize = 0;
             multiplyButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             multiplyButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             multiplyButton.FlatStyle = FlatStyle.Flat;
@@ -131,6 +137,7 @@ namespace Calculator
             subtractButton.BackColor = Color.DimGray;
             subtractButton.BackgroundImageLayout = ImageLayout.None;
             subtractButton.FlatAppearance.BorderColor = Color.Black;
+            subtractButton.FlatAppearance.BorderSize = 0;
             subtractButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             subtractButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             subtractButton.FlatStyle = FlatStyle.Flat;
@@ -150,6 +157,7 @@ namespace Calculator
             addButton.BackColor = Color.DimGray;
             addButton.BackgroundImageLayout = ImageLayout.None;
             addButton.FlatAppearance.BorderColor = Color.Black;
+            addButton.FlatAppearance.BorderSize = 0;
             addButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             addButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             addButton.FlatStyle = FlatStyle.Flat;
@@ -169,6 +177,7 @@ namespace Calculator
             resultButton.BackColor = Color.DimGray;
             resultButton.BackgroundImageLayout = ImageLayout.None;
             resultButton.FlatAppearance.BorderColor = Color.Black;
+            resultButton.FlatAppearance.BorderSize = 0;
             resultButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             resultButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             resultButton.FlatStyle = FlatStyle.Flat;
@@ -188,6 +197,7 @@ namespace Calculator
             nineButton.BackColor = Color.DimGray;
             nineButton.BackgroundImageLayout = ImageLayout.None;
             nineButton.FlatAppearance.BorderColor = Color.Black;
+            nineButton.FlatAppearance.BorderSize = 0;
             nineButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             nineButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             nineButton.FlatStyle = FlatStyle.Flat;
@@ -207,6 +217,7 @@ namespace Calculator
             eightButton.BackColor = Color.DimGray;
             eightButton.BackgroundImageLayout = ImageLayout.None;
             eightButton.FlatAppearance.BorderColor = Color.Black;
+            eightButton.FlatAppearance.BorderSize = 0;
             eightButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             eightButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             eightButton.FlatStyle = FlatStyle.Flat;
@@ -226,6 +237,7 @@ namespace Calculator
             sevenButton.BackColor = Color.DimGray;
             sevenButton.BackgroundImageLayout = ImageLayout.None;
             sevenButton.FlatAppearance.BorderColor = Color.Black;
+            sevenButton.FlatAppearance.BorderSize = 0;
             sevenButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             sevenButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             sevenButton.FlatStyle = FlatStyle.Flat;
@@ -245,6 +257,7 @@ namespace Calculator
             sixButton.BackColor = Color.DimGray;
             sixButton.BackgroundImageLayout = ImageLayout.None;
             sixButton.FlatAppearance.BorderColor = Color.Black;
+            sixButton.FlatAppearance.BorderSize = 0;
             sixButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             sixButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             sixButton.FlatStyle = FlatStyle.Flat;
@@ -264,6 +277,7 @@ namespace Calculator
             fiveButton.BackColor = Color.DimGray;
             fiveButton.BackgroundImageLayout = ImageLayout.None;
             fiveButton.FlatAppearance.BorderColor = Color.Black;
+            fiveButton.FlatAppearance.BorderSize = 0;
             fiveButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             fiveButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             fiveButton.FlatStyle = FlatStyle.Flat;
@@ -283,6 +297,7 @@ namespace Calculator
             fourButton.BackColor = Color.DimGray;
             fourButton.BackgroundImageLayout = ImageLayout.None;
             fourButton.FlatAppearance.BorderColor = Color.Black;
+            fourButton.FlatAppearance.BorderSize = 0;
             fourButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             fourButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             fourButton.FlatStyle = FlatStyle.Flat;
@@ -302,6 +317,7 @@ namespace Calculator
             oneButton.BackColor = Color.DimGray;
             oneButton.BackgroundImageLayout = ImageLayout.None;
             oneButton.FlatAppearance.BorderColor = Color.Black;
+            oneButton.FlatAppearance.BorderSize = 0;
             oneButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             oneButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             oneButton.FlatStyle = FlatStyle.Flat;
@@ -321,6 +337,7 @@ namespace Calculator
             twoButton.BackColor = Color.DimGray;
             twoButton.BackgroundImageLayout = ImageLayout.None;
             twoButton.FlatAppearance.BorderColor = Color.Black;
+            twoButton.FlatAppearance.BorderSize = 0;
             twoButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             twoButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             twoButton.FlatStyle = FlatStyle.Flat;
@@ -340,6 +357,7 @@ namespace Calculator
             threeButton.BackColor = Color.DimGray;
             threeButton.BackgroundImageLayout = ImageLayout.None;
             threeButton.FlatAppearance.BorderColor = Color.Black;
+            threeButton.FlatAppearance.BorderSize = 0;
             threeButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             threeButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             threeButton.FlatStyle = FlatStyle.Flat;
@@ -359,6 +377,7 @@ namespace Calculator
             zeroButton.BackColor = Color.DimGray;
             zeroButton.BackgroundImageLayout = ImageLayout.None;
             zeroButton.FlatAppearance.BorderColor = Color.Black;
+            zeroButton.FlatAppearance.BorderSize = 0;
             zeroButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             zeroButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             zeroButton.FlatStyle = FlatStyle.Flat;
@@ -392,6 +411,7 @@ namespace Calculator
             decimalButton.BackColor = Color.DimGray;
             decimalButton.BackgroundImageLayout = ImageLayout.None;
             decimalButton.FlatAppearance.BorderColor = Color.Black;
+            decimalButton.FlatAppearance.BorderSize = 0;
             decimalButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             decimalButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             decimalButton.FlatStyle = FlatStyle.Flat;
@@ -411,6 +431,7 @@ namespace Calculator
             signalButton.BackColor = Color.DimGray;
             signalButton.BackgroundImageLayout = ImageLayout.None;
             signalButton.FlatAppearance.BorderColor = Color.Black;
+            signalButton.FlatAppearance.BorderSize = 0;
             signalButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
             signalButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
             signalButton.FlatStyle = FlatStyle.Flat;
@@ -425,12 +446,75 @@ namespace Calculator
             signalButton.UseVisualStyleBackColor = false;
             signalButton.Click += signalButton_Click;
             // 
+            // sqrButton
+            // 
+            sqrButton.BackColor = Color.DimGray;
+            sqrButton.BackgroundImageLayout = ImageLayout.None;
+            sqrButton.FlatAppearance.BorderColor = Color.Black;
+            sqrButton.FlatAppearance.BorderSize = 0;
+            sqrButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            sqrButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
+            sqrButton.FlatStyle = FlatStyle.Flat;
+            sqrButton.Font = new Font("Arial", 16F);
+            sqrButton.ForeColor = Color.White;
+            sqrButton.ImageAlign = ContentAlignment.MiddleRight;
+            sqrButton.Location = new Point(193, 220);
+            sqrButton.Name = "sqrButton";
+            sqrButton.Size = new Size(85, 46);
+            sqrButton.TabIndex = 20;
+            sqrButton.Text = "√";
+            sqrButton.UseVisualStyleBackColor = false;
+            sqrButton.Click += sqrButton_Click;
+            // 
+            // expoButton
+            // 
+            expoButton.BackColor = Color.DimGray;
+            expoButton.BackgroundImageLayout = ImageLayout.None;
+            expoButton.FlatAppearance.BorderColor = Color.Black;
+            expoButton.FlatAppearance.BorderSize = 0;
+            expoButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            expoButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
+            expoButton.FlatStyle = FlatStyle.Flat;
+            expoButton.Font = new Font("Arial", 16F);
+            expoButton.ForeColor = Color.White;
+            expoButton.ImageAlign = ContentAlignment.MiddleRight;
+            expoButton.Location = new Point(103, 221);
+            expoButton.Name = "expoButton";
+            expoButton.Size = new Size(85, 46);
+            expoButton.TabIndex = 21;
+            expoButton.Text = "x²";
+            expoButton.UseVisualStyleBackColor = false;
+            expoButton.Click += expoButton_Click;
+            // 
+            // logButton
+            // 
+            logButton.BackColor = Color.DimGray;
+            logButton.BackgroundImageLayout = ImageLayout.None;
+            logButton.FlatAppearance.BorderColor = Color.Black;
+            logButton.FlatAppearance.BorderSize = 0;
+            logButton.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            logButton.FlatAppearance.MouseOverBackColor = Color.DimGray;
+            logButton.FlatStyle = FlatStyle.Flat;
+            logButton.Font = new Font("Arial", 14F);
+            logButton.ForeColor = Color.White;
+            logButton.ImageAlign = ContentAlignment.MiddleRight;
+            logButton.Location = new Point(12, 221);
+            logButton.Name = "logButton";
+            logButton.Size = new Size(85, 46);
+            logButton.TabIndex = 22;
+            logButton.Text = "log¹⁰";
+            logButton.UseVisualStyleBackColor = false;
+            logButton.Click += logButton_Click;
+            // 
             // Calculator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(381, 486);
+            Controls.Add(logButton);
+            Controls.Add(expoButton);
+            Controls.Add(sqrButton);
             Controls.Add(signalButton);
             Controls.Add(decimalButton);
             Controls.Add(previewBox);
@@ -482,5 +566,8 @@ namespace Calculator
         private TextBox previewBox;
         private Button decimalButton;
         private Button signalButton;
+        private Button sqrButton;
+        private Button expoButton;
+        private Button logButton;
     }
 }
