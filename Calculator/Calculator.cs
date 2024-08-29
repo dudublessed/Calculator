@@ -134,26 +134,59 @@ namespace Calculator
 
         private void sqrButton_Click(object sender, EventArgs e)
         {
-            MathValue = Convert.ToDecimal(typedBox.Text);
-            MathResult = Convert.ToDecimal(Math.Sqrt(Convert.ToDouble(MathValue)));
-            previewBox.Text = ($"√({MathValue})");
-            typedBox.Text = Convert.ToString(MathResult);
+            if (typedBox.Text == "")
+            {
+                typedBox.Text = "";
+            }
+            else if (typedBox.Text == "0")
+            {
+                typedBox.Text = "0";
+            }
+            else
+            {
+                MathValue = Convert.ToDecimal(typedBox.Text);
+                MathResult = Convert.ToDecimal(Math.Sqrt(Convert.ToDouble(MathValue)));
+                previewBox.Text = ($"√({MathValue})");
+                typedBox.Text = Convert.ToString(MathResult);
+            }
         }
 
         private void expoButton_Click(object sender, EventArgs e)
         {
-            MathValue = Convert.ToDecimal(typedBox.Text);
-            MathResult = Convert.ToDecimal(Math.Pow(Convert.ToDouble(MathValue), 2));
-            previewBox.Text = ($"sqr({MathValue})");
-            typedBox.Text = Convert.ToString(MathResult);
+            if (typedBox.Text == "")
+            {
+                typedBox.Text = "";
+            }
+            else if (typedBox.Text == "0")
+            {
+                typedBox.Text = "0";
+            }
+            else
+            {
+                MathValue = Convert.ToDecimal(typedBox.Text);
+                MathResult = Convert.ToDecimal(Math.Pow(Convert.ToDouble(MathValue), 2));
+                previewBox.Text = ($"sqr({MathValue})");
+                typedBox.Text = Convert.ToString(MathResult);
+            }
         }
 
         private void logButton_Click(object sender, EventArgs e)
         {
-            MathValue = Convert.ToDecimal(typedBox.Text);
-            MathResult = Convert.ToDecimal(Math.Log10(Convert.ToDouble(MathValue)));
-            previewBox.Text = ($"log({MathValue})");
-            typedBox.Text = Convert.ToString(MathResult);
+            if (typedBox.Text == "")
+            {
+                typedBox.Text = "";
+            }
+            else if (typedBox.Text == "0")
+            {
+                typedBox.Text = "0";
+            }
+            else
+            {
+                MathValue = Convert.ToDecimal(typedBox.Text);
+                MathResult = Convert.ToDecimal(Math.Log10(Convert.ToDouble(MathValue)));
+                previewBox.Text = ($"log({MathValue})");
+                typedBox.Text = Convert.ToString(MathResult);
+            }
         }
 
         private void resultButton_Click(object sender, EventArgs e)
