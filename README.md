@@ -2,7 +2,7 @@
 
 It's a simple calculator made in Visual Studio 2022 using C# with Windows Forms. 
 
-- That project made me a little familiar with something using C# without being in the console. It was kinda cool to made.
+- That project made me a little familiar with something that uses C# without being in the console. It was kinda cool to made.
 
 ## Example Images
 ![1](https://github.com/user-attachments/assets/373f0f71-8d12-4525-bcde-32982205a603)
